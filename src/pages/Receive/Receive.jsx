@@ -53,7 +53,6 @@ function Receive() {
     setMessageInterval(interval);
     setIsTalking(true);
   };
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -76,6 +75,9 @@ function Receive() {
   };
 
   const handleReplay = () => {
+    if(messages.length===0) {
+      return;
+    }
     setCurrentMessageIndex(0);
     if (messageInterval) {
       clearInterval(messageInterval);
@@ -87,11 +89,11 @@ function Receive() {
   return (
     <div className="Receive" style={{ backgroundColor:bgColor }}>
       <div>{messages[currentMessageIndex]}</div>
-      <form onSubmit={handleSubmit}>
+      {/* <form onSubmit={handleSubmit}>
         <label htmlFor="message">Message</label>
         <input name="message" id="message" />
         <button type="submit">Submit</button>
-      </form>
+      </form> */}
       <Flower isTalking={isTalking} />
       <button onClick={handleReplay}>Replay</button>
     </div>

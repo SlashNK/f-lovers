@@ -1,26 +1,16 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  RouterProvider,
-  Route,
-} from "react-router-dom";
+import ReactDOM from "react-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Receive from "./pages/Receive/Receive";
+import Send from "./pages/Send/Send";
+import { GENERAL_PREFIX } from "./shared/constants";
 
-// const router = createBrowserRouter(
-//   createRoutesFromElements(
-//     [<Route path="/" element={<div>Test</div>}/>,
-//     <Route path="/receive" element={<Receive />} />
-//     //<Route path="/send" element={<Assistant />} />
-//   ]
-//   )
-// );
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  // // <React.StrictMode>
-  //   <RouterProvider router={router} />
-  // // </React.StrictMode>
-  <Receive/>
+ReactDOM.render(
+  <BrowserRouter basename={GENERAL_PREFIX}>
+    <Routes>
+      <Route path="/receive" element={<Receive />} />
+      <Route path="/send" element={<Send />} />
+    </Routes>
+  </BrowserRouter>,
+  document.getElementById("root")
 );

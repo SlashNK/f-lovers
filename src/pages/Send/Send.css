@@ -1,0 +1,23 @@
+.Send {
+  text-align: center;
+  width: 100%;
+  border: 1px solid green;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.messages-container {
+  margin-bottom: 20px;
+}
+
+.add-button {
+  margin-top: 10px;
+}
