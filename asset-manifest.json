@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/f-lovers/static/css/main.47cb37b8.css",
+    "main.js": "/f-lovers/static/js/main.009f05f1.js",
+    "index.html": "/f-lovers/index.html",
+    "main.47cb37b8.css.map": "/f-lovers/static/css/main.47cb37b8.css.map",
+    "main.009f05f1.js.map": "/f-lovers/static/js/main.009f05f1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.47cb37b8.css",
+    "static/js/main.009f05f1.js"
+  ]
+}
